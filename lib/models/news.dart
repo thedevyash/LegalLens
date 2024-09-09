@@ -1,39 +1,40 @@
 class news {
-  String? category;
-  String? content;
-  String? date;
-  String? location;
-  String? source;
+  String? author;
   String? title;
-  String? image;
+  String? description;
+  String? url;
+  String? urlToImage;
+  String? publishedAt;
+  String? content;
+
   news(
-      {this.category,
-      this.content,
-      this.date,
-      this.location,
-      this.source,
+      {this.author,
       this.title,
-      this.image});
+      this.description,
+      this.url,
+      this.urlToImage,
+      this.publishedAt,
+      this.content});
 
   news.fromJson(Map<String, dynamic> json) {
-    category = json['category'];
-    content = json['content'];
-    date = json['date'];
-    location = json['location'];
-    source = json['source'];
+    author = json['author'];
     title = json['title'];
-    image = json['image'];
+    description = json['description'];
+    url = json['url'];
+    urlToImage = json['urlToImage'];
+    publishedAt = json['publishedAt'];
+    content = json['content'];
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['category'] = this.category;
-    data['content'] = this.content;
-    data['date'] = this.date;
-    data['location'] = this.location;
-    data['source'] = this.source;
+    data['author'] = this.author;
     data['title'] = this.title;
-    data['image'] = this.image;
+    data['description'] = this.description;
+    data['url'] = this.url;
+    data['urlToImage'] = this.urlToImage;
+    data['publishedAt'] = this.publishedAt;
+    data['content'] = this.content;
     return data;
   }
 }

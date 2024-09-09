@@ -26,7 +26,7 @@ class GetnewsArticlesController extends GetxController {
         var data = jsonDecode(response.body);
         print(data);
         newsArticles.value =
-            (data['news'] as List).map((i) => news.fromJson(i)).toList();
+            (data['articles'] as List).map((i) => news.fromJson(i)).toList();
         return true;
       } else {
         throw Exception('Error');
